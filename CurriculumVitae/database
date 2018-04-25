@@ -1,0 +1,104 @@
+
+
+
+CREATE DATABASE	meladi;
+SHOW DATABASES;
+USE meladi
+
+CREATE TABLE  medidas
+(
+idMedida int PRIMARy KEy,
+medida varchar (50) NOT NULL);
+
+
+
+
+CREATE TABLE categorias
+(
+idCategoria int PRIMARy KEy,
+categoria varchar (50) NOT NULL,
+descripcion varchar(100));
+
+
+
+CREATE TABLE productos
+(
+idProductos int PRIMARy KEy,
+descripcion varchar(100),
+idCategoria int NOT NULL,
+precio decimal(6,2) NOT NULL,
+nota varchar(50),
+idMedida int NOT NULL,
+foreign key ( idCategoria) references categorias (idCategoria),
+foreign key ( idMedida) references medidas (idMedida));
+
+
+
+
+
+
+
+
+tabla debil si no existe no afecta las reglas de negocio
+tabla fuerte si no existe no existe nada
+
+reglas de negocio: la forma del proceso en las bases de datos
+
+auto_increment: permite que la llave primaria se incremente automaticamenete por lo tanto no es necesario que se incluya al momento de insertar un registro
+
+las llaves tienen qu tener el mismo tipo de datos
+
+
+
+mysql -u root -p
+create database meladi;
+use meladi;
+create table medida
+(
+idmedida int primary key auto_increment,
+medida varchar(50) not null);
+
+create table categorias
+
+create table productos
+(
+idprducto  int primary key,
+descripcion vacchar(50),
+
+
+describe 
+
+
+dll data definitiion languaje
+alter table
+agregar una columna: ADD "columna" "tipos de tdatos para "
+
+ALTER TABLE Productos ADD costo decimal(6,2);
+
+eliminar un campo
+ALTER TABLE Productos DROP costo;
+
+cambiar nomber al campo
+ALTER TABLE Productos CHANGES Nonbre nombre Varchar(40);
+
+cambiar el tipo de dato 
+
+
+
+irc
+
+
+30/03/2017
+
+USE meladi;
+insert into medida(idmedida, medida)
+values(001,'kilos');
+insert into medida(idmedida, medida)
+values(002,'libras');
+insert into medida(idmedida, medida)
+values(003,'gramos');
+insert into medida(idmedida, medida)
+values(004,'miligramos');
+
+select*from medida
+ guardamos el archivo
